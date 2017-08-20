@@ -5,6 +5,7 @@ const app = express();
 require('dotenv').config();
 
 app.get('/', function (req, res) {
+  res.setHeader('Access-Control-Allow-Origin', process.env.BASE_URL || '*');
   res.send('Hello World!')
 });
 
